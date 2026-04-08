@@ -21,7 +21,7 @@ jobs:
           # Шаблон и базовые настройки
           template: classic
           base: activity, community, repositories
-          base.indepth: true
+          base_indepth: true
 
           # Языки — компактный график
           plugin_languages: true
