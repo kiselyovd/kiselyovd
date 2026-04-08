@@ -2,8 +2,6 @@
   <img src="assets/header.svg" width="100%" alt="Даниил Киселёв · ML Engineer" />
 </p>
 
-## Даниил Киселёв · ML Engineer
-
 ML-инженер с фокусом на LLM-системы, RAG и компьютерное зрение в продакшене.
 Строю ассистентов на базе LLM, OCR-пайплайны и мультимодальные модели для работы
 с документами; разворачиваю всё это on-premise и в air-gapped контурах для
@@ -21,19 +19,14 @@ ML-инженер с фокусом на LLM-системы, RAG и компью
   LangGraph, air-gapped развёртывание
 
 <p align="center">
-  <img src="assets/text2bim-graph.svg" width="100%" alt="Text2BIM architecture" />
+  <img src="assets/text2bim-graph.svg" width="85%" alt="Text2BIM architecture" />
 </p>
 
 ---
 
-### Стек
-
-| Область | Инструменты |
-|---|---|
-| **LLM & RAG** | PyTorch, Transformers, vLLM, LangChain / LangGraph, Qdrant, Unsloth, LoRA, квантизация |
-| **Computer Vision** | Ultralytics, VLM, OCR-пайплайны, сегментация, детекция |
-| **MLOps & Infra** | Docker, Kubernetes, Airflow, W&B, ONNX, on-prem / air-gapped |
-| **Backend** | Python, FastAPI, Django, PostgreSQL, Redis |
+<p align="center">
+  <img src="assets/stack.svg" width="85%" alt="Tech stack" />
+</p>
 
 ---
 
@@ -51,11 +44,13 @@ ML-инженер с фокусом на LLM-системы, RAG и компью
 ### Активность
 
 <p align="center">
-  <img src="assets/metrics.svg" alt="GitHub Metrics" width="100%" />
+  <img src="assets/metrics.svg" alt="GitHub Metrics" width="85%" />
 </p>
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=JellyWilliam&show_icons=true&theme=transparent&hide_border=true&title_color=6366f1&text_color=8b949e&icon_color=6366f1&bg_color=00000000" alt="GitHub Stats" />
+  <a href="https://github.com/JellyWilliam">
+    <img src="https://github-readme-stats.vercel.app/api?username=JellyWilliam&show_icons=true&theme=transparent&hide_border=true&title_color=6366f1&text_color=8b949e&icon_color=6366f1&bg_color=00000000" alt="GitHub Stats" />
+  </a>
 </p>
 
 ---
@@ -68,8 +63,6 @@ ML-инженер с фокусом на LLM-системы, RAG и компью
 <summary>🇬🇧 English version</summary>
 
 <br/>
-
-## Daniil Kiselev · ML Engineer
 
 ML engineer focused on LLM systems, RAG, and computer vision in production.
 I build LLM-based assistants, OCR pipelines, and multimodal document models;
@@ -86,26 +79,25 @@ deploy on-premise and in air-gapped environments for enterprise clients
   air-gapped deployment
 
 <p align="center">
-  <img src="assets/text2bim-graph.svg" width="100%" alt="Text2BIM architecture" />
+  <img src="assets/text2bim-graph.svg" width="85%" alt="Text2BIM architecture" />
 </p>
 
-### Stack
+---
 
-| Area | Tools |
-|---|---|
-| **LLM & RAG** | PyTorch, Transformers, vLLM, LangChain / LangGraph, Qdrant, Unsloth, LoRA, quantization |
-| **Computer Vision** | Ultralytics, VLM, OCR pipelines, segmentation, detection |
-| **MLOps & Infra** | Docker, Kubernetes, Airflow, W&B, ONNX, on-prem / air-gapped |
-| **Backend** | Python, FastAPI, Django, PostgreSQL, Redis |
+<p align="center">
+  <img src="assets/stack.svg" width="85%" alt="Tech stack" />
+</p>
 
 ### Activity
 
 <p align="center">
-  <img src="assets/metrics.svg" alt="GitHub Metrics" width="100%" />
+  <img src="assets/metrics.svg" alt="GitHub Metrics" width="85%" />
 </p>
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=JellyWilliam&show_icons=true&theme=transparent&hide_border=true&title_color=6366f1&text_color=8b949e&icon_color=6366f1&bg_color=00000000" alt="GitHub Stats" />
+  <a href="https://github.com/JellyWilliam">
+    <img src="https://github-readme-stats.vercel.app/api?username=JellyWilliam&show_icons=true&theme=transparent&hide_border=true&title_color=6366f1&text_color=8b949e&icon_color=6366f1&bg_color=00000000" alt="GitHub Stats" />
+  </a>
 </p>
 
 <!-- ### Contact

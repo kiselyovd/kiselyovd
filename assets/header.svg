@@ -1,165 +1,218 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" fill="none">
   <style>
-    /* ── Animations ── */
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(8px); }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(12px); }
       to   { opacity: 1; transform: translateY(0); }
     }
     @keyframes pulse {
-      0%, 100% { opacity: 0.08; r: 1.2; }
-      50%      { opacity: 0.25; r: 2.0; }
+      0%, 100% { opacity: 0.06; }
+      50%      { opacity: 0.35; }
     }
     @keyframes sweep {
-      0%   { stroke-dashoffset: 420; }
-      100% { stroke-dashoffset: 0; }
+      from { stroke-dashoffset: 450; }
+      to   { stroke-dashoffset: 0; }
     }
-    @keyframes glowPulse {
-      0%, 100% { stop-opacity: 0.04; }
-      50%      { stop-opacity: 0.10; }
+    @keyframes barGrow {
+      from { transform: scaleX(0); }
+      to   { transform: scaleX(1); }
     }
-    @keyframes accentGrow {
-      from { width: 0; x: 600; }
-      to   { width: 240; x: 480; }
+    @keyframes gridReveal {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+    }
+    @keyframes orbFloat {
+      0%, 100% { transform: translateY(0px); opacity: 0.04; }
+      50%      { transform: translateY(-6px); opacity: 0.10; }
+    }
+    @keyframes scanline {
+      0%   { transform: translateX(-100%); }
+      100% { transform: translateX(1200px); }
     }
 
     .header-name {
-      animation: fadeIn 1.2s ease-out both;
+      animation: fadeInUp 1s ease-out 0.4s both;
     }
     .header-role {
-      animation: fadeIn 1.2s ease-out 0.3s both;
+      animation: fadeInUp 1s ease-out 0.7s both;
     }
-    .node { animation: pulse 4s ease-in-out infinite; }
-    .node-d1 { animation-delay: 0s; }
-    .node-d2 { animation-delay: 0.7s; }
-    .node-d3 { animation-delay: 1.4s; }
-    .node-d4 { animation-delay: 2.1s; }
-    .node-d5 { animation-delay: 2.8s; }
-    .node-d6 { animation-delay: 3.5s; }
-
-    .diag-line {
-      stroke-dasharray: 420;
-      stroke-dashoffset: 420;
-      animation: sweep 3s ease-out both;
-    }
-    .diag-d1 { animation-delay: 0.0s; }
-    .diag-d2 { animation-delay: 0.15s; }
-    .diag-d3 { animation-delay: 0.3s; }
-    .diag-d4 { animation-delay: 0.45s; }
-    .diag-d5 { animation-delay: 0.6s; }
-    .diag-d6 { animation-delay: 0.75s; }
-    .diag-d7 { animation-delay: 0.9s; }
-    .diag-d8 { animation-delay: 0.4s; }
-    .diag-d9 { animation-delay: 0.7s; }
-    .diag-d10 { animation-delay: 1.0s; }
-
     .accent-bar {
-      animation: accentGrow 1s ease-out 0.8s both;
+      transform-origin: center;
+      animation: barGrow 0.8s ease-out 1s both;
+    }
+    .grid-overlay {
+      animation: gridReveal 2s ease-out both;
+    }
+    .node {
+      animation: pulse 3.5s ease-in-out infinite;
+    }
+    .n1 { animation-delay: 0s; }
+    .n2 { animation-delay: 0.5s; }
+    .n3 { animation-delay: 1.0s; }
+    .n4 { animation-delay: 1.5s; }
+    .n5 { animation-delay: 2.0s; }
+    .n6 { animation-delay: 2.5s; }
+    .n7 { animation-delay: 0.3s; }
+    .n8 { animation-delay: 1.3s; }
+
+    .diag {
+      stroke-dasharray: 450;
+      stroke-dashoffset: 450;
+      animation: sweep 2.5s ease-out both;
+    }
+    .d1 { animation-delay: 0s; }
+    .d2 { animation-delay: 0.1s; }
+    .d3 { animation-delay: 0.2s; }
+    .d4 { animation-delay: 0.3s; }
+    .d5 { animation-delay: 0.4s; }
+    .d6 { animation-delay: 0.5s; }
+    .d7 { animation-delay: 0.6s; }
+    .d8 { animation-delay: 0.25s; }
+    .d9 { animation-delay: 0.5s; }
+    .d10 { animation-delay: 0.75s; }
+
+    .orb {
+      animation: orbFloat 6s ease-in-out infinite;
+    }
+    .orb-1 { animation-delay: 0s; }
+    .orb-2 { animation-delay: 2s; }
+    .orb-3 { animation-delay: 4s; }
+
+    .scan {
+      animation: scanline 8s linear infinite;
     }
 
-    /* ── Light mode overrides ── */
     @media (prefers-color-scheme: light) {
-      .bg-rect      { fill: #f8f9fc; }
-      .grid-line    { stroke: #000000; stroke-opacity: 0.04; }
-      .dot-fill     { fill: #000000; fill-opacity: 0.04; }
-      .glow-start   { stop-color: #6366f1; stop-opacity: 0.06; }
-      .glow-end     { stop-color: #6366f1; stop-opacity: 0; }
-      .header-name text, .name-text { fill: #1e293b; }
-      .role-text    { fill: #6366f1; }
-      .diag-stroke  { stroke: #6366f1; stroke-opacity: 0.10; }
-      .node-fill    { fill: #6366f1; }
-      .accent-fill  { fill: #6366f1; opacity: 0.30; }
-      .bottom-start { stop-color: #6366f1; stop-opacity: 0.20; }
-      .bottom-mid   { stop-color: #7c3aed; stop-opacity: 0.10; }
-      .bottom-end   { stop-color: #6366f1; stop-opacity: 0; }
+      .bg-main { fill: #f8f9fc; }
+      .bg-grad-start { stop-color: #f0f0f8; }
+      .bg-grad-end { stop-color: #f8f9fc; }
+      .grid-stroke { stroke: #6366f1; stroke-opacity: 0.06; }
+      .dot-circle { fill: #6366f1; fill-opacity: 0.05; }
+      .name-text { fill: #0f172a; }
+      .role-text { fill: #6366f1; opacity: 0.8; }
+      .diag-group { stroke: #6366f1; stroke-opacity: 0.08; }
+      .node-circle { fill: #6366f1; }
+      .accent-rect { fill: #6366f1; opacity: 0.35; }
+      .orb-circle { fill: #6366f1; }
+      .scan-rect { fill: url(#scanGradLight); }
+      .glow-s1 { stop-opacity: 0.08; }
     }
   </style>
 
   <defs>
-    <!-- Background gradient -->
     <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="300" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#0a0a0f"/>
-      <stop offset="100%" stop-color="#0f0f1a"/>
+      <stop class="bg-grad-start" offset="0%" stop-color="#0a0a0f"/>
+      <stop class="bg-grad-end" offset="100%" stop-color="#0d0d18"/>
     </linearGradient>
 
-    <!-- Accent gradient for bottom line -->
-    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
-      <stop class="bottom-start" offset="0%" stop-color="#4f46e5" stop-opacity="0.15"/>
-      <stop class="bottom-mid" offset="50%" stop-color="#7c3aed" stop-opacity="0.08"/>
-      <stop class="bottom-end" offset="100%" stop-color="#4f46e5" stop-opacity="0"/>
-    </linearGradient>
-
-    <!-- Central glow -->
-    <radialGradient id="glow" cx="50%" cy="50%" r="35%">
-      <stop class="glow-start" offset="0%" stop-color="#6366f1" stop-opacity="0.06">
-        <animate attributeName="stop-opacity" values="0.04;0.10;0.04" dur="5s" repeatCount="indefinite"/>
+    <radialGradient id="glow" cx="50%" cy="50%" r="40%">
+      <stop class="glow-s1" offset="0%" stop-color="#6366f1" stop-opacity="0.05">
+        <animate attributeName="stop-opacity" values="0.03;0.09;0.03" dur="6s" repeatCount="indefinite"/>
       </stop>
-      <stop class="glow-end" offset="100%" stop-color="#6366f1" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#6366f1" stop-opacity="0"/>
     </radialGradient>
 
-    <!-- Grid pattern -->
-    <pattern id="grid" x="0" y="0" width="60" height="60" patternUnits="userSpaceOnUse">
-      <path class="grid-line" d="M 60 0 L 0 0 0 60" fill="none" stroke="#ffffff" stroke-opacity="0.03" stroke-width="0.5"/>
+    <radialGradient id="glow2" cx="30%" cy="60%" r="25%">
+      <stop offset="0%" stop-color="#7c3aed" stop-opacity="0.03">
+        <animate attributeName="stop-opacity" values="0.02;0.06;0.02" dur="8s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" stop-color="#7c3aed" stop-opacity="0"/>
+    </radialGradient>
+
+    <linearGradient id="scanGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#6366f1" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#6366f1" stop-opacity="0.04"/>
+      <stop offset="100%" stop-color="#6366f1" stop-opacity="0"/>
+    </linearGradient>
+
+    <linearGradient id="scanGradLight" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#6366f1" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#6366f1" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#6366f1" stop-opacity="0"/>
+    </linearGradient>
+
+    <linearGradient id="bottomLine" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#6366f1" stop-opacity="0"/>
+      <stop offset="30%" stop-color="#6366f1" stop-opacity="0.2"/>
+      <stop offset="50%" stop-color="#7c3aed" stop-opacity="0.15"/>
+      <stop offset="70%" stop-color="#6366f1" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#6366f1" stop-opacity="0"/>
+    </linearGradient>
+
+    <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path class="grid-stroke" d="M 60 0 L 0 0 0 60" fill="none" stroke="#ffffff" stroke-opacity="0.025" stroke-width="0.5"/>
     </pattern>
 
-    <!-- Dot pattern -->
-    <pattern id="dots" x="0" y="0" width="30" height="30" patternUnits="userSpaceOnUse">
-      <circle class="dot-fill" cx="15" cy="15" r="0.6" fill="#ffffff" fill-opacity="0.05"/>
+    <pattern id="dots" width="30" height="30" patternUnits="userSpaceOnUse">
+      <circle class="dot-circle" cx="15" cy="15" r="0.5" fill="#ffffff" fill-opacity="0.04"/>
     </pattern>
   </defs>
 
   <!-- Background -->
-  <rect class="bg-rect" width="1200" height="300" fill="url(#bg)"/>
+  <rect class="bg-main" width="1200" height="300" fill="url(#bg)"/>
 
-  <!-- Grid overlay -->
-  <rect width="1200" height="300" fill="url(#grid)"/>
-  <rect width="1200" height="300" fill="url(#dots)"/>
-
-  <!-- Central glow -->
-  <rect width="1200" height="300" fill="url(#glow)"/>
-
-  <!-- Geometric accent lines — animated diagonal mesh -->
-  <g class="diag-stroke" stroke="#6366f1" stroke-opacity="0.06" stroke-width="0.5" fill="none">
-    <line class="diag-line diag-d1"  x1="80"  y1="0" x2="400"  y2="300"/>
-    <line class="diag-line diag-d2"  x1="200" y1="0" x2="520"  y2="300"/>
-    <line class="diag-line diag-d3"  x1="320" y1="0" x2="640"  y2="300"/>
-    <line class="diag-line diag-d4"  x1="440" y1="0" x2="760"  y2="300"/>
-    <line class="diag-line diag-d5"  x1="560" y1="0" x2="880"  y2="300"/>
-    <line class="diag-line diag-d6"  x1="680" y1="0" x2="1000" y2="300"/>
-    <line class="diag-line diag-d7"  x1="800" y1="0" x2="1120" y2="300"/>
-    <line class="diag-line diag-d8"  x1="400" y1="0" x2="80"   y2="300"/>
-    <line class="diag-line diag-d9"  x1="700" y1="0" x2="380"  y2="300"/>
-    <line class="diag-line diag-d10" x1="1000" y1="0" x2="680" y2="300"/>
+  <!-- Grid + dots -->
+  <g class="grid-overlay">
+    <rect width="1200" height="300" fill="url(#grid)"/>
+    <rect width="1200" height="300" fill="url(#dots)"/>
   </g>
+
+  <!-- Dual glow -->
+  <rect width="1200" height="300" fill="url(#glow)"/>
+  <rect width="1200" height="300" fill="url(#glow2)"/>
+
+  <!-- Scanning line effect -->
+  <rect class="scan scan-rect" x="-200" y="0" width="200" height="300" fill="url(#scanGrad)"/>
+
+  <!-- Diagonal mesh -->
+  <g class="diag-group" stroke="#6366f1" stroke-opacity="0.05" stroke-width="0.5" fill="none">
+    <line class="diag d1"  x1="80"   y1="0" x2="400"  y2="300"/>
+    <line class="diag d2"  x1="200"  y1="0" x2="520"  y2="300"/>
+    <line class="diag d3"  x1="320"  y1="0" x2="640"  y2="300"/>
+    <line class="diag d4"  x1="440"  y1="0" x2="760"  y2="300"/>
+    <line class="diag d5"  x1="560"  y1="0" x2="880"  y2="300"/>
+    <line class="diag d6"  x1="680"  y1="0" x2="1000" y2="300"/>
+    <line class="diag d7"  x1="800"  y1="0" x2="1120" y2="300"/>
+    <line class="diag d8"  x1="400"  y1="0" x2="80"   y2="300"/>
+    <line class="diag d9"  x1="700"  y1="0" x2="380"  y2="300"/>
+    <line class="diag d10" x1="1000" y1="0" x2="680"  y2="300"/>
+  </g>
+
+  <!-- Floating orbs -->
+  <circle class="orb orb-1 orb-circle" cx="180" cy="80" r="30" fill="#6366f1" opacity="0.03"/>
+  <circle class="orb orb-2 orb-circle" cx="900" cy="200" r="45" fill="#7c3aed" opacity="0.025"/>
+  <circle class="orb orb-3 orb-circle" cx="1050" cy="60" r="20" fill="#6366f1" opacity="0.03"/>
 
   <!-- Intersection nodes — pulsing -->
-  <g class="node-fill" fill="#6366f1">
-    <circle class="node node-d1" cx="240" cy="150" r="1.5"/>
-    <circle class="node node-d2" cx="480" cy="100" r="1.2"/>
-    <circle class="node node-d3" cx="540" cy="200" r="1.0"/>
-    <circle class="node node-d4" cx="720" cy="150" r="1.5"/>
-    <circle class="node node-d5" cx="960" cy="120" r="1.2"/>
-    <circle class="node node-d6" cx="840" cy="220" r="1.0"/>
+  <g class="node-circle" fill="#6366f1">
+    <circle class="node n1" cx="240" cy="150" r="1.8"/>
+    <circle class="node n2" cx="480" cy="100" r="1.5"/>
+    <circle class="node n3" cx="540" cy="200" r="1.2"/>
+    <circle class="node n4" cx="720" cy="150" r="1.8"/>
+    <circle class="node n5" cx="960" cy="120" r="1.5"/>
+    <circle class="node n6" cx="840" cy="220" r="1.2"/>
+    <circle class="node n7" cx="360" cy="60"  r="1.0"/>
+    <circle class="node n8" cx="660" cy="240" r="1.0"/>
   </g>
 
-  <!-- Accent bar — grows from center -->
-  <rect class="accent-bar accent-fill" x="480" y="188" width="240" height="1" rx="0.5" fill="#6366f1" opacity="0.25"/>
+  <!-- Accent bar -->
+  <rect class="accent-bar accent-rect" x="480" y="190" width="240" height="1" rx="0.5" fill="#6366f1" opacity="0.25"/>
 
-  <!-- Name — fade in -->
-  <text class="header-name name-text" x="600" y="140" text-anchor="middle"
+  <!-- Name -->
+  <text class="header-name name-text" x="600" y="142" text-anchor="middle"
         font-family="'Segoe UI', system-ui, -apple-system, sans-serif"
-        font-size="32" font-weight="600" letter-spacing="2"
+        font-size="34" font-weight="600" letter-spacing="3"
         fill="#e2e8f0">
     Даниил Киселёв
   </text>
 
-  <!-- Role — fade in with delay -->
-  <text class="header-role role-text" x="600" y="218" text-anchor="middle"
+  <!-- Role -->
+  <text class="header-role role-text" x="600" y="220" text-anchor="middle"
         font-family="'Segoe UI', system-ui, -apple-system, sans-serif"
-        font-size="14" font-weight="400" letter-spacing="4"
-        fill="#6366f1" opacity="0.7">
+        font-size="13" font-weight="400" letter-spacing="6"
+        fill="#6366f1" opacity="0.65">
     ML ENGINEER
   </text>
 
-  <!-- Bottom fade line -->
-  <rect x="0" y="298" width="1200" height="2" fill="url(#accent)"/>
+  <!-- Bottom line -->
+  <rect x="0" y="298" width="1200" height="2" fill="url(#bottomLine)"/>
 </svg>

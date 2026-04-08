@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 280" fill="none">
+  <style>
+    @keyframes rowSlide {
+      from { opacity: 0; transform: translateX(-10px); }
+      to   { opacity: 1; transform: translateX(0); }
+    }
+    @keyframes dotPulse {
+      0%, 100% { opacity: 0.3; }
+      50%      { opacity: 0.8; }
+    }
+
+    .row { animation: rowSlide 0.5s ease-out both; }
+    .r1 { animation-delay: 0s; }
+    .r2 { animation-delay: 0.1s; }
+    .r3 { animation-delay: 0.2s; }
+    .r4 { animation-delay: 0.3s; }
+
+    .cat-dot { animation: dotPulse 3s ease-in-out infinite; }
+    .cd1 { animation-delay: 0s; }
+    .cd2 { animation-delay: 0.75s; }
+    .cd3 { animation-delay: 1.5s; }
+    .cd4 { animation-delay: 2.25s; }
+
+    @media (prefers-color-scheme: light) {
+      .stack-bg { fill: #f8f9fc; }
+      .stack-divider { stroke: #e2e8f0; }
+      .cat-label { fill: #0f172a; }
+      .cat-dot { fill: #6366f1; }
+      .tool-text { fill: #334155; }
+      .stack-title { fill: #0f172a; }
+    }
+  </style>
+
+  <!-- Background -->
+  <rect class="stack-bg" width="720" height="280" rx="6" fill="#0a0a0f"/>
+
+  <!-- Title -->
+  <text class="stack-title" x="36" y="36" font-family="'Segoe UI', system-ui, sans-serif" font-size="15" font-weight="600" fill="#e2e8f0" letter-spacing="1">СТЕК</text>
+
+  <!-- Divider under title -->
+  <line class="stack-divider" x1="36" y1="50" x2="684" y2="50" stroke="#ffffff" stroke-opacity="0.06" stroke-width="0.5"/>
+
+  <!-- Row 1: LLM & RAG -->
+  <g class="row r1">
+    <circle class="cat-dot cd1" cx="48" cy="82" r="4" fill="#6366f1" opacity="0.5"/>
+    <text class="cat-label" x="62" y="87" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" font-weight="600" fill="#c4b5fd">LLM &amp; RAG</text>
+    <text class="tool-text" x="170" y="87" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" fill="#8b949e">PyTorch · Transformers · vLLM · LangChain / LangGraph · Qdrant · Unsloth · LoRA · квантизация</text>
+  </g>
+  <line class="stack-divider" x1="36" y1="104" x2="684" y2="104" stroke="#ffffff" stroke-opacity="0.04" stroke-width="0.5"/>
+
+  <!-- Row 2: Computer Vision -->
+  <g class="row r2">
+    <circle class="cat-dot cd2" cx="48" cy="134" r="4" fill="#7c3aed" opacity="0.5"/>
+    <text class="cat-label" x="62" y="139" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" font-weight="600" fill="#c4b5fd">Computer Vision</text>
+    <text class="tool-text" x="188" y="139" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" fill="#8b949e">Ultralytics · VLM · OCR-пайплайны · сегментация · детекция</text>
+  </g>
+  <line class="stack-divider" x1="36" y1="156" x2="684" y2="156" stroke="#ffffff" stroke-opacity="0.04" stroke-width="0.5"/>
+
+  <!-- Row 3: MLOps & Infra -->
+  <g class="row r3">
+    <circle class="cat-dot cd3" cx="48" cy="186" r="4" fill="#6366f1" opacity="0.5"/>
+    <text class="cat-label" x="62" y="191" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" font-weight="600" fill="#c4b5fd">MLOps &amp; Infra</text>
+    <text class="tool-text" x="175" y="191" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" fill="#8b949e">Docker · Kubernetes · Airflow · W&amp;B · ONNX · on-prem / air-gapped</text>
+  </g>
+  <line class="stack-divider" x1="36" y1="208" x2="684" y2="208" stroke="#ffffff" stroke-opacity="0.04" stroke-width="0.5"/>
+
+  <!-- Row 4: Backend -->
+  <g class="row r4">
+    <circle class="cat-dot cd4" cx="48" cy="238" r="4" fill="#7c3aed" opacity="0.5"/>
+    <text class="cat-label" x="62" y="243" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" font-weight="600" fill="#c4b5fd">Backend</text>
+    <text class="tool-text" x="132" y="243" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" fill="#8b949e">Python · FastAPI · Django · PostgreSQL · Redis</text>
+  </g>
+</svg>

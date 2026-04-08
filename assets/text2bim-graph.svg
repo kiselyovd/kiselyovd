@@ -1,108 +1,115 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 160" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 140" fill="none">
   <style>
     @keyframes flowDash {
       to { stroke-dashoffset: -16; }
     }
     @keyframes nodeAppear {
-      from { opacity: 0; transform: scale(0.8); }
+      from { opacity: 0; transform: scale(0.85); }
       to   { opacity: 1; transform: scale(1); }
     }
     @keyframes labelFade {
       from { opacity: 0; }
       to   { opacity: 1; }
     }
-
-    .flow-line {
-      stroke-dasharray: 8, 8;
-      animation: flowDash 1.2s linear infinite;
+    @keyframes pulseNode {
+      0%, 100% { stroke-opacity: 0.2; }
+      50%      { stroke-opacity: 0.5; }
     }
 
-    .graph-node {
-      animation: nodeAppear 0.6s ease-out both;
+    .flow {
+      stroke-dasharray: 6, 6;
+      animation: flowDash 1s linear infinite;
     }
-    .n1 { animation-delay: 0s; }
-    .n2 { animation-delay: 0.15s; }
-    .n3 { animation-delay: 0.3s; }
-    .n4 { animation-delay: 0.45s; }
-    .n5 { animation-delay: 0.6s; }
+    .gn { animation: nodeAppear 0.5s ease-out both; }
+    .gn1 { animation-delay: 0s; }
+    .gn2 { animation-delay: 0.12s; }
+    .gn3 { animation-delay: 0.24s; }
+    .gn4 { animation-delay: 0.36s; }
+    .gn5 { animation-delay: 0.48s; }
 
-    .graph-label {
-      animation: labelFade 0.5s ease-out both;
+    .gn rect {
+      animation: pulseNode 3s ease-in-out infinite;
     }
-    .l1 { animation-delay: 0.1s; }
-    .l2 { animation-delay: 0.25s; }
-    .l3 { animation-delay: 0.4s; }
-    .l4 { animation-delay: 0.55s; }
-    .l5 { animation-delay: 0.7s; }
+    .gn1 rect { animation-delay: 0s; }
+    .gn2 rect { animation-delay: 0.6s; }
+    .gn3 rect { animation-delay: 1.2s; }
+    .gn4 rect { animation-delay: 1.8s; }
+    .gn5 rect { animation-delay: 2.4s; }
 
-    .graph-sublabel {
-      animation: labelFade 0.5s ease-out both;
-    }
-    .s1 { animation-delay: 0.2s; }
-    .s2 { animation-delay: 0.35s; }
-    .s3 { animation-delay: 0.5s; }
-    .s4 { animation-delay: 0.65s; }
-    .s5 { animation-delay: 0.8s; }
+    .gl { animation: labelFade 0.4s ease-out both; }
+    .gl1 { animation-delay: 0.1s; }
+    .gl2 { animation-delay: 0.22s; }
+    .gl3 { animation-delay: 0.34s; }
+    .gl4 { animation-delay: 0.46s; }
+    .gl5 { animation-delay: 0.58s; }
 
-    /* ── Light mode ── */
+    .gs { animation: labelFade 0.4s ease-out both; }
+    .gs1 { animation-delay: 0.15s; }
+    .gs2 { animation-delay: 0.27s; }
+    .gs3 { animation-delay: 0.39s; }
+    .gs4 { animation-delay: 0.51s; }
+    .gs5 { animation-delay: 0.63s; }
+
     @media (prefers-color-scheme: light) {
-      .graph-bg       { fill: #f8f9fc; }
-      .node-border    { stroke: #6366f1; stroke-opacity: 0.3; }
-      .node-bg        { fill: #f0f0ff; }
-      .flow-line      { stroke: #6366f1; stroke-opacity: 0.25; }
-      .graph-label    { fill: #1e293b; }
-      .graph-sublabel { fill: #64748b; }
+      .gbg { fill: #f8f9fc; }
+      .gnr { fill: #f0f0ff; stroke: #6366f1; stroke-opacity: 0.25; }
+      .gnr-accent { fill: #f0f0ff; stroke: #7c3aed; stroke-opacity: 0.3; }
+      .flow { stroke: #6366f1; stroke-opacity: 0.2; }
+      .gl { fill: #1e293b; }
+      .gl-accent { fill: #7c3aed; }
+      .gs { fill: #64748b; }
+      .gcap { fill: #94a3b8; }
     }
   </style>
 
   <!-- Background -->
-  <rect class="graph-bg" width="800" height="160" rx="8" fill="#0a0a0f"/>
+  <rect class="gbg" width="720" height="140" rx="6" fill="#0a0a0f"/>
 
-  <!-- Flow lines (animated dashes) -->
-  <g class="flow-line" stroke="#6366f1" stroke-opacity="0.15" stroke-width="1.5" fill="none">
-    <line x1="148" y1="70" x2="222" y2="70"/>
-    <line x1="338" y1="70" x2="382" y2="70"/>
-    <line x1="498" y1="70" x2="542" y2="70"/>
-    <line x1="658" y1="70" x2="700" y2="50"/>
+  <!-- Flow lines -->
+  <g class="flow" stroke="#6366f1" stroke-opacity="0.12" stroke-width="1.5" fill="none">
+    <line x1="122" y1="60" x2="164" y2="60"/>
+    <line x1="280" y1="60" x2="322" y2="60"/>
+    <line x1="438" y1="60" x2="480" y2="60"/>
+    <line x1="596" y1="60" x2="638" y2="60"/>
   </g>
 
-  <!-- Node 1: Text / User -->
-  <g class="graph-node n1">
-    <rect class="node-bg" x="40" y="44" width="108" height="52" rx="6" fill="#12121f" stroke="#6366f1" stroke-opacity="0.2" stroke-width="1"/>
-    <text class="graph-label l1" x="94" y="67" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="13" font-weight="600" fill="#e2e8f0">Text</text>
-    <text class="graph-sublabel s1" x="94" y="84" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="9" fill="#6b7280">user prompt</text>
+  <!-- Node 1: Text -->
+  <g class="gn gn1">
+    <rect class="gnr" x="14" y="34" width="108" height="52" rx="6" fill="#111120" stroke="#6366f1" stroke-opacity="0.2" stroke-width="1"/>
+    <text class="gl gl1" x="68" y="57" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="13" font-weight="600" fill="#e2e8f0">Text</text>
+    <text class="gs gs1" x="68" y="74" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="9" fill="#6b7280">user prompt</text>
   </g>
 
   <!-- Node 2: LLM Agent -->
-  <g class="graph-node n2">
-    <rect class="node-bg" x="222" y="44" width="116" height="52" rx="6" fill="#12121f" stroke="#6366f1" stroke-opacity="0.2" stroke-width="1"/>
-    <text class="graph-label l2" x="280" y="67" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="13" font-weight="600" fill="#e2e8f0">LLM Agent</text>
-    <text class="graph-sublabel s2" x="280" y="84" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="9" fill="#6b7280">AutoGen</text>
+  <g class="gn gn2">
+    <rect class="gnr" x="164" y="34" width="116" height="52" rx="6" fill="#111120" stroke="#6366f1" stroke-opacity="0.2" stroke-width="1"/>
+    <text class="gl gl2" x="222" y="57" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="13" font-weight="600" fill="#e2e8f0">LLM Agent</text>
+    <text class="gs gs2" x="222" y="74" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="9" fill="#6b7280">AutoGen</text>
   </g>
 
   <!-- Node 3: MCP -->
-  <g class="graph-node n3">
-    <rect class="node-bg" x="382" y="44" width="116" height="52" rx="6" fill="#12121f" stroke="#6366f1" stroke-opacity="0.2" stroke-width="1"/>
-    <text class="graph-label l3" x="440" y="67" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="13" font-weight="600" fill="#e2e8f0">MCP</text>
-    <text class="graph-sublabel s3" x="440" y="84" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="9" fill="#6b7280">tool bridge</text>
+  <g class="gn gn3">
+    <rect class="gnr" x="322" y="34" width="116" height="52" rx="6" fill="#111120" stroke="#6366f1" stroke-opacity="0.2" stroke-width="1"/>
+    <text class="gl gl3" x="380" y="57" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="13" font-weight="600" fill="#e2e8f0">MCP</text>
+    <text class="gs gs3" x="380" y="74" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="9" fill="#6b7280">tool bridge</text>
   </g>
 
   <!-- Node 4: Revit -->
-  <g class="graph-node n4">
-    <rect class="node-bg" x="542" y="44" width="116" height="52" rx="6" fill="#12121f" stroke="#6366f1" stroke-opacity="0.2" stroke-width="1"/>
-    <text class="graph-label l4" x="600" y="67" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="13" font-weight="600" fill="#e2e8f0">Revit</text>
-    <text class="graph-sublabel s4" x="600" y="84" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="9" fill="#6b7280">C# plugin</text>
+  <g class="gn gn4">
+    <rect class="gnr" x="480" y="34" width="116" height="52" rx="6" fill="#111120" stroke="#6366f1" stroke-opacity="0.2" stroke-width="1"/>
+    <text class="gl gl4" x="538" y="57" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="13" font-weight="600" fill="#e2e8f0">Revit</text>
+    <text class="gs gs4" x="538" y="74" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="9" fill="#6b7280">C# plugin</text>
   </g>
 
-  <!-- Node 5: BIM Model (output, offset down-right) -->
-  <g class="graph-node n5">
-    <rect class="node-bg" x="700" y="24" width="80" height="44" rx="6" fill="#12121f" stroke="#7c3aed" stroke-opacity="0.25" stroke-width="1"/>
-    <text class="graph-label l5" x="740" y="42" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="11" font-weight="600" fill="#a78bfa">BIM</text>
-    <text class="graph-sublabel s5" x="740" y="56" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="9" fill="#6b7280">model</text>
+  <!-- Node 5: BIM -->
+  <g class="gn gn5">
+    <rect class="gnr gnr-accent" x="638" y="34" width="68" height="52" rx="6" fill="#111120" stroke="#7c3aed" stroke-opacity="0.3" stroke-width="1"/>
+    <text class="gl gl5 gl-accent" x="672" y="57" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="13" font-weight="600" fill="#a78bfa">BIM</text>
+    <text class="gs gs5" x="672" y="74" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="9" fill="#6b7280">model</text>
   </g>
 
   <!-- Caption -->
-  <text x="400" y="136" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="10" fill="#4b5563" letter-spacing="1">
+  <text class="gcap" x="360" y="118" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="10" fill="#4b5563" letter-spacing="1">
     TEXT2BIM — natural language to parametric BIM changes
   </text>
 </svg>
