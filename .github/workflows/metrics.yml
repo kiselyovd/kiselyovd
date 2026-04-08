@@ -1,0 +1,38 @@
+name: GitHub Metrics
+
+on:
+  schedule:
+    - cron: "0 4 * * *" # каждый день в 04:00 UTC
+  workflow_dispatch: # ручной запуск
+
+jobs:
+  metrics:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Generate metrics SVG
+        uses: lowlighter/metrics@latest
+        with:
+          token: ${{ secrets.METRICS_TOKEN }}
+          filename: assets/metrics.svg
+          user: JellyWilliam
+
+          # Шаблон и базовые настройки
+          template: classic
+          base: activity, community, repositories
+          base.indepth: true
+
+          # Языки — компактный график
+          plugin_languages: true
+          plugin_languages_sections: most-used
+          plugin_languages_categories: programming
+          plugin_languages_limit: 6
+          plugin_languages_colors: "6366f1, 7c3aed, a78bfa, c4b5fd, 8b949e, 6b7280"
+          plugin_languages_details: percentage
+
+          # Стиль
+          config_display: large
+          config_padding: 6%
+          config_output: svg
+          config_timezone: Europe/Moscow

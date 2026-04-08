@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" fill="none">
+  <defs>
+    <!-- Background gradient -->
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="300" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0a0a0f"/>
+      <stop offset="100%" stop-color="#0f0f1a"/>
+    </linearGradient>
+
+    <!-- Accent gradient for geometry -->
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#4f46e5" stop-opacity="0.15"/>
+      <stop offset="50%" stop-color="#7c3aed" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#4f46e5" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Glow for the focal point -->
+    <radialGradient id="glow" cx="50%" cy="50%" r="35%">
+      <stop offset="0%" stop-color="#6366f1" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#6366f1" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Grid pattern -->
+    <pattern id="grid" x="0" y="0" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#ffffff" stroke-opacity="0.03" stroke-width="0.5"/>
+    </pattern>
+
+    <!-- Dot pattern -->
+    <pattern id="dots" x="0" y="0" width="30" height="30" patternUnits="userSpaceOnUse">
+      <circle cx="15" cy="15" r="0.6" fill="#ffffff" fill-opacity="0.05"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="300" fill="url(#bg)"/>
+
+  <!-- Grid overlay -->
+  <rect width="1200" height="300" fill="url(#grid)"/>
+  <rect width="1200" height="300" fill="url(#dots)"/>
+
+  <!-- Central glow -->
+  <rect width="1200" height="300" fill="url(#glow)"/>
+
+  <!-- Geometric accent lines — subtle diagonal mesh -->
+  <g stroke="#6366f1" stroke-opacity="0.06" stroke-width="0.5" fill="none">
+    <!-- Diagonal lines from top-left region -->
+    <line x1="80" y1="0" x2="400" y2="300"/>
+    <line x1="200" y1="0" x2="520" y2="300"/>
+    <line x1="320" y1="0" x2="640" y2="300"/>
+    <line x1="440" y1="0" x2="760" y2="300"/>
+    <line x1="560" y1="0" x2="880" y2="300"/>
+    <line x1="680" y1="0" x2="1000" y2="300"/>
+    <line x1="800" y1="0" x2="1120" y2="300"/>
+
+    <!-- Counter-diagonals, sparser -->
+    <line x1="400" y1="0" x2="80" y2="300"/>
+    <line x1="700" y1="0" x2="380" y2="300"/>
+    <line x1="1000" y1="0" x2="680" y2="300"/>
+  </g>
+
+  <!-- Intersection highlight nodes -->
+  <g fill="#6366f1">
+    <circle cx="240" cy="150" r="1.5" opacity="0.12"/>
+    <circle cx="480" cy="100" r="1.2" opacity="0.10"/>
+    <circle cx="540" cy="200" r="1.0" opacity="0.08"/>
+    <circle cx="720" cy="150" r="1.5" opacity="0.12"/>
+    <circle cx="960" cy="120" r="1.2" opacity="0.10"/>
+    <circle cx="840" cy="220" r="1.0" opacity="0.08"/>
+  </g>
+
+  <!-- Accent bar — thin horizontal line -->
+  <rect x="480" y="188" width="240" height="1" rx="0.5" fill="#6366f1" opacity="0.25"/>
+
+  <!-- Name -->
+  <text x="600" y="140" text-anchor="middle"
+        font-family="'Segoe UI', system-ui, -apple-system, sans-serif"
+        font-size="32" font-weight="600" letter-spacing="2"
+        fill="#e2e8f0">
+    Даниил Киселёв
+  </text>
+
+  <!-- Role -->
+  <text x="600" y="218" text-anchor="middle"
+        font-family="'Segoe UI', system-ui, -apple-system, sans-serif"
+        font-size="14" font-weight="400" letter-spacing="4" text-transform="uppercase"
+        fill="#6366f1" opacity="0.7">
+    ML ENGINEER
+  </text>
+
+  <!-- Bottom fade line -->
+  <rect x="0" y="298" width="1200" height="2" fill="url(#accent)"/>
+</svg>
