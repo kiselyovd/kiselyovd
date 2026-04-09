@@ -44,7 +44,7 @@ ML-инженер с фокусом на LLM-системы, RAG и компью
 ### Активность
 
 <p align="center">
-  <img src="assets/metrics.svg" alt="GitHub Metrics" width="100%" />
+  <img src="assets/metrics.svg" alt="GitHub Metrics" width="85%" />
 </p>
 
 
@@ -86,7 +86,7 @@ deploy on-premise and in air-gapped environments for enterprise clients
 ### Activity
 
 <p align="center">
-  <img src="assets/metrics.svg" alt="GitHub Metrics" width="100%" />
+  <img src="assets/metrics.svg" alt="GitHub Metrics" width="85%" />
 </p>
 
 

@@ -2,8 +2,8 @@ name: GitHub Metrics
 
 on:
   schedule:
-    - cron: "0 4 * * *" # каждый день в 04:00 UTC
-  workflow_dispatch: # ручной запуск
+    - cron: "0 4 * * *"
+  workflow_dispatch:
 
 jobs:
   metrics:
@@ -17,13 +17,12 @@ jobs:
           token: ${{ secrets.METRICS_TOKEN }}
           filename: assets/metrics.svg
           user: JellyWilliam
+          committer_message: "Update assets/metrics.svg - [Skip GitHub Action]"
 
-          # Шаблон и базовые настройки
           template: classic
-          base: activity, community, repositories
-          base_indepth: true
+          base: ""
+          base_skip: yes
 
-          # Языки — компактный график
           plugin_languages: true
           plugin_languages_sections: most-used
           plugin_languages_categories: programming
@@ -31,7 +30,6 @@ jobs:
           plugin_languages_colors: github
           plugin_languages_details: percentage
 
-          # Стиль
-          config_padding: 6%, 20%
+          config_padding: 5%
           config_output: svg
           config_timezone: Europe/Moscow
