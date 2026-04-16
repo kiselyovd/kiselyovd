@@ -30,16 +30,31 @@ ML-инженер с фокусом на LLM-системы, RAG и компью
 
 ---
 
-### Проекты
+### <a name="ml-portfolio"></a>🧪 ML Portfolio
+
+Четыре production-grade ML-проекта на общем cookiecutter-шаблоне. Полный стек: **PyTorch Lightning · Hydra · MLflow · DVC · FastAPI · Docker · GitHub Actions · MkDocs · HuggingFace Hub**.
+
+| Проект | Задача | Главная модель | Метрики | Статус |
+|---|---|---|---|---|
+| [**chest-xray-classifier**](https://github.com/kiselyovd/chest-xray-classifier) [![CI](https://github.com/kiselyovd/chest-xray-classifier/actions/workflows/ci.yml/badge.svg)](https://github.com/kiselyovd/chest-xray-classifier/actions/workflows/ci.yml) [![HF](https://img.shields.io/badge/%F0%9F%A4%97-model-yellow)](https://huggingface.co/kiselyovd/chest-xray-classifier) | 3-class pneumonia classification | ConvNeXt-V2-Tiny | acc **91.3%** · F1 **90.3%** · AUROC **97.5%** | ✅ v0.1.0 |
+| [**brain-mri-segmentation**](https://github.com/kiselyovd/brain-mri-segmentation) [![CI](https://github.com/kiselyovd/brain-mri-segmentation/actions/workflows/ci.yml/badge.svg)](https://github.com/kiselyovd/brain-mri-segmentation/actions/workflows/ci.yml) [![HF](https://img.shields.io/badge/%F0%9F%A4%97-model-yellow)](https://huggingface.co/kiselyovd/brain-mri-segmentation) | Binary brain-tumor segmentation | SegFormer-B2 | Dice **65.5%** · IoU **66.2%** · Pixel acc **99.7%** | ✅ v0.1.0 |
+| [**vehicle-keypoints**](https://github.com/kiselyovd/vehicle-keypoints) [![CI](https://github.com/kiselyovd/vehicle-keypoints/actions/workflows/ci.yml/badge.svg)](https://github.com/kiselyovd/vehicle-keypoints/actions/workflows/ci.yml) [![HF](https://img.shields.io/badge/%F0%9F%A4%97-model-yellow)](https://huggingface.co/kiselyovd/vehicle-keypoints) | 14-keypoint car pose (CarFusion) | YOLO26-pose | Pose mAP50 · PCK@0.05 (на дообучении) | 🏃 Training |
+| [**ml-project-template**](https://github.com/kiselyovd/ml-project-template) [![CI](https://github.com/kiselyovd/ml-project-template/actions/workflows/ci.yml/badge.svg)](https://github.com/kiselyovd/ml-project-template/actions/workflows/ci.yml) | Cookiecutter scaffold для трёх выше | — | 12/12 meta-tests green | ✅ Stable |
+
+Общие фичи для всех трёх моделей: patient-/scene-level сплиты без leakage, bilingual EN+RU README, multi-stage Docker, HF Hub model cards с виджетами, DVC-трекаемые артефакты, Python 3.12+3.13 matrix CI, ruff + mypy + deptry + bandit + interrogate + pre-commit quality gates.
+
+---
+
+### Другие репозитории
 
 | Репозиторий | Описание |
 |-------------|----------|
 | [rag-pipeline-demo](https://github.com/kiselyovd/rag-pipeline-demo) | Модульный RAG-пайплайн — retrieval, reranking, generation |
 | [llm-finetune-template](https://github.com/kiselyovd/llm-finetune-template) | Шаблон для fine-tuning LLM с LoRA/QLoRA через Unsloth |
 | [dungeon-master-ai](https://github.com/kiselyovd/dungeon-master-ai) | D&D с AI — Clean Architecture, CQRS, FastAPI |
-| [x-pneumo-net](https://github.com/kiselyovd/x-pneumo-net) | Детекция пневмонии по рентгену — 26 архитектур, 84% accuracy |
 | [yolo-learn](https://github.com/kiselyovd/yolo-learn) | Практический курс по YOLO — 6 модулей |
-| [grnti-classifier](https://github.com/kiselyovd/grnti-classifier) | Классификация научных статей — BERT 86% F1 |
+| [cardio-risk-rf](https://github.com/kiselyovd/cardio-risk-rf) | Tabular-классификация сердечно-сосудистого риска (LightGBM + SHAP) · на рефакторинге |
+| [grnti-text-classifier](https://github.com/kiselyovd/grnti-text-classifier) | Классификация научных статей по ГРНТИ (XLM-RoBERTa) · на рефакторинге |
 
 ---
 
@@ -78,6 +93,21 @@ deploy on-premise and in air-gapped environments for enterprise clients
 <p align="center">
   <img src="assets/text2bim-graph.svg" width="85%" alt="Text2BIM architecture" />
 </p>
+
+---
+
+### 🧪 ML Portfolio
+
+Four production-grade ML projects sharing one cookiecutter template. Full stack: **PyTorch Lightning · Hydra · MLflow · DVC · FastAPI · Docker · GitHub Actions · MkDocs · HuggingFace Hub**.
+
+| Project | Task | Main model | Metrics | Status |
+|---|---|---|---|---|
+| [**chest-xray-classifier**](https://github.com/kiselyovd/chest-xray-classifier) | 3-class pneumonia classification | ConvNeXt-V2-Tiny | acc **91.3%** · F1 **90.3%** · AUROC **97.5%** | ✅ v0.1.0 |
+| [**brain-mri-segmentation**](https://github.com/kiselyovd/brain-mri-segmentation) | Binary brain-tumor segmentation | SegFormer-B2 | Dice **65.5%** · IoU **66.2%** · Pixel acc **99.7%** | ✅ v0.1.0 |
+| [**vehicle-keypoints**](https://github.com/kiselyovd/vehicle-keypoints) | 14-keypoint car pose (CarFusion) | YOLO26-pose | Pose mAP50 · PCK@0.05 (training) | 🏃 Training |
+| [**ml-project-template**](https://github.com/kiselyovd/ml-project-template) | Cookiecutter scaffold | — | 12/12 meta-tests | ✅ Stable |
+
+Every repo ships: patient-/scene-level splits with no leakage, bilingual EN+RU README, multi-stage Docker, HF Hub model card with widgets, DVC-tracked artefacts, Python 3.12+3.13 matrix CI, full quality gates (ruff + mypy + deptry + bandit + interrogate + pre-commit).
 
 ---
 
