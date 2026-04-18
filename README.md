@@ -12,9 +12,15 @@ ML-инженер с фокусом на LLM-системы, RAG и компью
 
 ### Сейчас работаю над
 
-- **Text2BIM Agent** — мультиагентная LLM-платформа для автоматизации BIM-проектирования
-  в Autodesk Revit. Текстовое описание &rarr; параметрические изменения в модели.
-  FastAPI, AutoGen, MCP-интеграция с Revit (C#)
+- **Text2BIM Agent** — мультиагентная LLM-платформа для автоматизации
+  BIM-проектирования в Autodesk Revit. Два режима: чат («опиши правку
+  текстом &rarr; параметрические изменения в модели») и визуальный
+  DAG-редактор сценариев (аналог n8n, но с LLM-нодами, версионированием
+  и валидацией под BIM-процессы). Polyglot-монорепо на Bun + Turborepo:
+  FastAPI-бэкенд, Tauri 2 + React 19 desktop-клиент, C# Revit-плагин
+  с multi-target сборкой под Revit 2019/2024/2025 (MCP-интеграция).
+  Observability на OpenTelemetry + Grafana/Prometheus/Jaeger, модульный
+  GitLab CI
 - **On-prem RAG** для строительной документации (ТУ, ТЗ, СНиП) — Qdrant, vLLM,
   LangGraph, air-gapped развёртывание
 
@@ -100,8 +106,13 @@ deploy on-premise and in air-gapped environments for enterprise clients
 ### Currently working on
 
 - **Text2BIM Agent** — multi-agent LLM platform for automating BIM design
-  in Autodesk Revit. Natural language &rarr; parametric model changes.
-  FastAPI, AutoGen, MCP integration with Revit (C#)
+  in Autodesk Revit. Two modes: chat ("describe the edit &rarr; parametric
+  model change") and a visual DAG scenario editor (n8n-style, but with
+  LLM-aware nodes, version diff, and BIM-specific validation). Polyglot
+  monorepo (Bun + Turborepo): FastAPI backend, Tauri 2 + React 19 desktop
+  client, C# Revit plugin with multi-target build for Revit 2019/2024/2025
+  (MCP integration). Observability on OpenTelemetry +
+  Grafana/Prometheus/Jaeger, modular GitLab CI
 - **On-prem RAG** for construction documentation — Qdrant, vLLM, LangGraph,
   air-gapped deployment
 
