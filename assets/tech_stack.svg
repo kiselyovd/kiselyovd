@@ -1,90 +1,27 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1216 654" width="1216" height="654">
-  <defs>
-    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="3"/>
-      <feOffset dx="0" dy="3"/>
-      <feComponentTransfer><feFuncA type="linear" slope="0.18"/></feComponentTransfer>
-      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
-  </defs>
-  <rect width="1216" height="654" fill="#fafafa"/>
-  <text x="608" y="42" text-anchor="middle" font-family="Inter, sans-serif" font-size="24" font-weight="700" fill="#1d3557">Tech stack</text>
-
-  <g transform="translate(40,100)">
-    <rect width="220" height="180" rx="16" fill="white" filter="url(#shadow)"/>
-    <image href="https://cdn.simpleicons.org/python/1d3557" x="70" y="30" width="80" height="80"/>
-    <text x="110" y="140" text-anchor="middle" font-family="Inter, sans-serif" font-size="17" font-weight="600" fill="#1d3557">Python</text>
-  </g>
-  <g transform="translate(278,100)">
-    <rect width="220" height="180" rx="16" fill="white" filter="url(#shadow)"/>
-    <image href="https://cdn.simpleicons.org/pytorch/1d3557" x="70" y="30" width="80" height="80"/>
-    <text x="110" y="140" text-anchor="middle" font-family="Inter, sans-serif" font-size="17" font-weight="600" fill="#1d3557">PyTorch</text>
-  </g>
-  <g transform="translate(516,100)">
-    <rect width="220" height="180" rx="16" fill="white" filter="url(#shadow)"/>
-    <image href="https://cdn.simpleicons.org/lightning/1d3557" x="70" y="30" width="80" height="80"/>
-    <text x="110" y="140" text-anchor="middle" font-family="Inter, sans-serif" font-size="17" font-weight="600" fill="#1d3557">Lightning</text>
-  </g>
-  <g transform="translate(754,100)">
-    <rect width="220" height="180" rx="16" fill="white" filter="url(#shadow)"/>
-    <image href="https://cdn.simpleicons.org/mlflow/1d3557" x="70" y="30" width="80" height="80"/>
-    <text x="110" y="140" text-anchor="middle" font-family="Inter, sans-serif" font-size="17" font-weight="600" fill="#1d3557">MLflow</text>
-  </g>
-  <g transform="translate(992,100)">
-    <rect width="220" height="180" rx="16" fill="white" filter="url(#shadow)"/>
-    <image href="https://cdn.simpleicons.org/dvc/1d3557" x="70" y="30" width="80" height="80"/>
-    <text x="110" y="140" text-anchor="middle" font-family="Inter, sans-serif" font-size="17" font-weight="600" fill="#1d3557">DVC</text>
-  </g>
-
-  <g transform="translate(40,298)">
-    <rect width="220" height="180" rx="16" fill="white" filter="url(#shadow)"/>
-    <image href="https://cdn.simpleicons.org/fastapi/1d3557" x="70" y="30" width="80" height="80"/>
-    <text x="110" y="140" text-anchor="middle" font-family="Inter, sans-serif" font-size="17" font-weight="600" fill="#1d3557">FastAPI</text>
-  </g>
-  <g transform="translate(278,298)">
-    <rect width="220" height="180" rx="16" fill="white" filter="url(#shadow)"/>
-    <image href="https://cdn.simpleicons.org/docker/1d3557" x="70" y="30" width="80" height="80"/>
-    <text x="110" y="140" text-anchor="middle" font-family="Inter, sans-serif" font-size="17" font-weight="600" fill="#1d3557">Docker</text>
-  </g>
-  <g transform="translate(516,298)">
-    <rect width="220" height="180" rx="16" fill="white" filter="url(#shadow)"/>
-    <image href="https://cdn.simpleicons.org/githubactions/1d3557" x="70" y="30" width="80" height="80"/>
-    <text x="110" y="140" text-anchor="middle" font-family="Inter, sans-serif" font-size="17" font-weight="600" fill="#1d3557">GitHub Actions</text>
-  </g>
-  <g transform="translate(754,298)">
-    <rect width="220" height="180" rx="16" fill="white" filter="url(#shadow)"/>
-    <image href="https://cdn.simpleicons.org/huggingface/1d3557" x="70" y="30" width="80" height="80"/>
-    <text x="110" y="140" text-anchor="middle" font-family="Inter, sans-serif" font-size="17" font-weight="600" fill="#1d3557">Hugging Face</text>
-  </g>
-  <g transform="translate(992,298)">
-    <rect width="220" height="180" rx="16" fill="white" filter="url(#shadow)"/>
-    <image href="https://cdn.simpleicons.org/astral/1d3557" x="70" y="30" width="80" height="80"/>
-    <text x="110" y="140" text-anchor="middle" font-family="Inter, sans-serif" font-size="17" font-weight="600" fill="#1d3557">uv</text>
-  </g>
-
-  <g transform="translate(40,496)">
-    <rect width="220" height="180" rx="16" fill="white" filter="url(#shadow)"/>
-    <image href="https://cdn.simpleicons.org/ruff/1d3557" x="70" y="30" width="80" height="80"/>
-    <text x="110" y="140" text-anchor="middle" font-family="Inter, sans-serif" font-size="17" font-weight="600" fill="#1d3557">Ruff</text>
-  </g>
-  <g transform="translate(278,496)">
-    <rect width="220" height="180" rx="16" fill="white" filter="url(#shadow)"/>
-    <image href="https://cdn.simpleicons.org/pydantic/1d3557" x="70" y="30" width="80" height="80"/>
-    <text x="110" y="140" text-anchor="middle" font-family="Inter, sans-serif" font-size="17" font-weight="600" fill="#1d3557">Pydantic</text>
-  </g>
-  <g transform="translate(516,496)">
-    <rect width="220" height="180" rx="16" fill="white" filter="url(#shadow)"/>
-    <image href="https://cdn.simpleicons.org/numpy/1d3557" x="70" y="30" width="80" height="80"/>
-    <text x="110" y="140" text-anchor="middle" font-family="Inter, sans-serif" font-size="17" font-weight="600" fill="#1d3557">NumPy</text>
-  </g>
-  <g transform="translate(754,496)">
-    <rect width="220" height="180" rx="16" fill="white" filter="url(#shadow)"/>
-    <image href="https://cdn.simpleicons.org/materialformkdocs/1d3557" x="70" y="30" width="80" height="80"/>
-    <text x="110" y="140" text-anchor="middle" font-family="Inter, sans-serif" font-size="17" font-weight="600" fill="#1d3557">MkDocs</text>
-  </g>
-  <g transform="translate(992,496)">
-    <rect width="220" height="180" rx="16" fill="white" filter="url(#shadow)"/>
-    <image href="https://cdn.simpleicons.org/pytest/1d3557" x="70" y="30" width="80" height="80"/>
-    <text x="110" y="140" text-anchor="middle" font-family="Inter, sans-serif" font-size="17" font-weight="600" fill="#1d3557">Pytest</text>
-  </g>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1252 716" width="1252" height="716">
+<defs>
+<filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+<feGaussianBlur stdDeviation="3"/>
+<feOffset dx="0" dy="3"/>
+<feComponentTransfer><feFuncA type="linear" slope="0.18"/></feComponentTransfer>
+<feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+</filter>
+</defs>
+<rect width="1252" height="716" fill="#fafafa"/>
+<text x="626.0" y="42" text-anchor="middle" font-family="Inter, sans-serif" font-size="24" font-weight="700" fill="#1d3557">Tech stack</text>
+<g transform="translate(40,100)"><rect width="220" height="180" rx="16" fill="white" filter="url(#shadow)"/><image href="https://cdn.simpleicons.org/python/1d3557" x="70.0" y="30" width="80" height="80"/><text x="110.0" y="140" text-anchor="middle" font-family="Inter, sans-serif" font-size="17" font-weight="600" fill="#1d3557">Python</text></g>
+<g transform="translate(278,100)"><rect width="220" height="180" rx="16" fill="white" filter="url(#shadow)"/><image href="https://cdn.simpleicons.org/pytorch/1d3557" x="70.0" y="30" width="80" height="80"/><text x="110.0" y="140" text-anchor="middle" font-family="Inter, sans-serif" font-size="17" font-weight="600" fill="#1d3557">PyTorch</text></g>
+<g transform="translate(516,100)"><rect width="220" height="180" rx="16" fill="white" filter="url(#shadow)"/><image href="https://cdn.simpleicons.org/lightning/1d3557" x="70.0" y="30" width="80" height="80"/><text x="110.0" y="140" text-anchor="middle" font-family="Inter, sans-serif" font-size="17" font-weight="600" fill="#1d3557">Lightning</text></g>
+<g transform="translate(754,100)"><rect width="220" height="180" rx="16" fill="white" filter="url(#shadow)"/><image href="https://cdn.simpleicons.org/meta/1d3557" x="70.0" y="30" width="80" height="80"/><text x="110.0" y="140" text-anchor="middle" font-family="Inter, sans-serif" font-size="17" font-weight="600" fill="#1d3557">Hydra</text></g>
+<g transform="translate(992,100)"><rect width="220" height="180" rx="16" fill="white" filter="url(#shadow)"/><image href="https://cdn.simpleicons.org/mlflow/1d3557" x="70.0" y="30" width="80" height="80"/><text x="110.0" y="140" text-anchor="middle" font-family="Inter, sans-serif" font-size="17" font-weight="600" fill="#1d3557">MLflow</text></g>
+<g transform="translate(40,298)"><rect width="220" height="180" rx="16" fill="white" filter="url(#shadow)"/><image href="https://cdn.simpleicons.org/dvc/1d3557" x="70.0" y="30" width="80" height="80"/><text x="110.0" y="140" text-anchor="middle" font-family="Inter, sans-serif" font-size="17" font-weight="600" fill="#1d3557">DVC</text></g>
+<g transform="translate(278,298)"><rect width="220" height="180" rx="16" fill="white" filter="url(#shadow)"/><image href="https://cdn.simpleicons.org/fastapi/1d3557" x="70.0" y="30" width="80" height="80"/><text x="110.0" y="140" text-anchor="middle" font-family="Inter, sans-serif" font-size="17" font-weight="600" fill="#1d3557">FastAPI</text></g>
+<g transform="translate(516,298)"><rect width="220" height="180" rx="16" fill="white" filter="url(#shadow)"/><image href="https://cdn.simpleicons.org/docker/1d3557" x="70.0" y="30" width="80" height="80"/><text x="110.0" y="140" text-anchor="middle" font-family="Inter, sans-serif" font-size="17" font-weight="600" fill="#1d3557">Docker</text></g>
+<g transform="translate(754,298)"><rect width="220" height="180" rx="16" fill="white" filter="url(#shadow)"/><image href="https://cdn.simpleicons.org/githubactions/1d3557" x="70.0" y="30" width="80" height="80"/><text x="110.0" y="140" text-anchor="middle" font-family="Inter, sans-serif" font-size="17" font-weight="600" fill="#1d3557">GitHub Actions</text></g>
+<g transform="translate(992,298)"><rect width="220" height="180" rx="16" fill="white" filter="url(#shadow)"/><image href="https://cdn.simpleicons.org/huggingface/1d3557" x="70.0" y="30" width="80" height="80"/><text x="110.0" y="140" text-anchor="middle" font-family="Inter, sans-serif" font-size="17" font-weight="600" fill="#1d3557">Hugging Face</text></g>
+<g transform="translate(40,496)"><rect width="220" height="180" rx="16" fill="white" filter="url(#shadow)"/><image href="https://cdn.simpleicons.org/astral/1d3557" x="70.0" y="30" width="80" height="80"/><text x="110.0" y="140" text-anchor="middle" font-family="Inter, sans-serif" font-size="17" font-weight="600" fill="#1d3557">uv</text></g>
+<g transform="translate(278,496)"><rect width="220" height="180" rx="16" fill="white" filter="url(#shadow)"/><image href="https://cdn.simpleicons.org/ruff/1d3557" x="70.0" y="30" width="80" height="80"/><text x="110.0" y="140" text-anchor="middle" font-family="Inter, sans-serif" font-size="17" font-weight="600" fill="#1d3557">Ruff</text></g>
+<g transform="translate(516,496)"><rect width="220" height="180" rx="16" fill="white" filter="url(#shadow)"/><image href="https://cdn.simpleicons.org/python/1d3557" x="70.0" y="30" width="80" height="80"/><text x="110.0" y="140" text-anchor="middle" font-family="Inter, sans-serif" font-size="17" font-weight="600" fill="#1d3557">MyPy</text></g>
+<g transform="translate(754,496)"><rect width="220" height="180" rx="16" fill="white" filter="url(#shadow)"/><image href="https://cdn.simpleicons.org/materialformkdocs/1d3557" x="70.0" y="30" width="80" height="80"/><text x="110.0" y="140" text-anchor="middle" font-family="Inter, sans-serif" font-size="17" font-weight="600" fill="#1d3557">MkDocs</text></g>
+<g transform="translate(992,496)"><rect width="220" height="180" rx="16" fill="white" filter="url(#shadow)"/><image href="https://cdn.simpleicons.org/pytest/1d3557" x="70.0" y="30" width="80" height="80"/><text x="110.0" y="140" text-anchor="middle" font-family="Inter, sans-serif" font-size="17" font-weight="600" fill="#1d3557">Pytest</text></g>
 </svg>
