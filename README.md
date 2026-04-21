@@ -1,31 +1,20 @@
 <p align="center">
-  <img src="assets/portfolio_banner.svg" width="100%" alt="Daniil Kiselyov · ML/MLOps Engineer" />
+  <img src="assets/portfolio_banner.svg" width="100%" alt="Daniil Kiselyov · Lead ML Engineer" />
 </p>
 
-ML-инженер с фокусом на LLM-системы, RAG и компьютерное зрение в продакшене.
-Строю ассистентов на базе LLM, OCR-пайплайны и мультимодальные модели для работы
-с документами; разворачиваю всё это on-premise и в air-gapped контурах для
-корпоративного сектора — строительство, нефтегаз. До ML занимался fullstack
-(Django/React) и тимлидил, поэтому довожу модели до полноценных сервисов, а не PoC.
+Lead ML Engineer. I build LLM systems, RAG, and multimodal pipelines for enterprise clients in on-premise and air-gapped environments. 5.5 years in ML and engineering; the last three years end-to-end LLM, OCR/VLM, and RAG platforms in production.
+
+Fullstack and team-lead background (Django/React) means I ship models as services, not proof-of-concepts.
 
 ---
 
-### Сейчас работаю над
+### Currently
 
-- **Text2BIM Agent** — мультиагентная LLM-платформа для автоматизации
-  BIM-проектирования в Autodesk Revit. Два режима: чат («опиши правку
-  текстом &rarr; параметрические изменения в модели») и визуальный
-  DAG-редактор сценариев (аналог n8n, но с LLM-нодами, версионированием
-  и валидацией под BIM-процессы). Polyglot-монорепо на Bun + Turborepo:
-  FastAPI-бэкенд, Tauri 2 + React 19 desktop-клиент, C# Revit-плагин
-  с multi-target сборкой под Revit 2019/2024/2025 (MCP-интеграция).
-  Observability на OpenTelemetry + Grafana/Prometheus/Jaeger, модульный
-  GitLab CI
-- **On-prem RAG** для строительной документации (ТУ, ТЗ, СНиП) — Qdrant, vLLM,
-  LangGraph, air-gapped развёртывание
+- **Multi-platform AI for BIM design** - production system for 160+ engineers at a major developer. Scenario Engine (n8n-style visual DAG with LLM-aware nodes, versioning, rollback) replacing an earlier multi-agent architecture. Polyglot monorepo: FastAPI backend, Tauri 2 + React 19 desktop, C# Revit plugin with a custom MCP protocol. Full MLOps contour - OpenTelemetry + Langfuse + Prometheus + Grafana + Jaeger.
+- **Visual RAG platform** for engineering documentation - hybrid retrieval (Visual RAG on PDF/DWG via Jina v4 + Text2SQL via Qwen on vLLM), four domain profiles, air-gapped deployments. Three enterprise clients shipped.
 
 <p align="center">
-  <img src="assets/text2bim-graph.svg" width="85%" alt="Text2BIM architecture" />
+  <img src="assets/text2bim-graph.svg" width="85%" alt="Text2BIM / Scenario Engine architecture" />
 </p>
 
 ---
@@ -33,130 +22,56 @@ ML-инженер с фокусом на LLM-системы, RAG и компью
 <p align="center">
   <img alt="Python" src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white"/>
   <img alt="PyTorch" src="https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white"/>
-  <img alt="Lightning" src="https://img.shields.io/badge/Lightning-792EE5?style=for-the-badge&logo=lightning&logoColor=white"/>
-  <img alt="Hydra" src="https://img.shields.io/badge/Hydra-89B8CD?style=for-the-badge&logo=meta&logoColor=white"/>
-  <img alt="MLflow" src="https://img.shields.io/badge/MLflow-0194E2?style=for-the-badge&logo=mlflow&logoColor=white"/>
-  <img alt="DVC" src="https://img.shields.io/badge/DVC-13ADC7?style=for-the-badge&logo=dvc&logoColor=white"/>
   <img alt="FastAPI" src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white"/>
+  <img alt="vLLM" src="https://img.shields.io/badge/vLLM-FF6B6B?style=for-the-badge&logoColor=white"/>
+  <img alt="Qwen" src="https://img.shields.io/badge/Qwen-615CED?style=for-the-badge&logoColor=white"/>
+  <img alt="Langfuse" src="https://img.shields.io/badge/Langfuse-0A0A0A?style=for-the-badge&logoColor=white"/>
+  <img alt="OpenTelemetry" src="https://img.shields.io/badge/OpenTelemetry-425CC7?style=for-the-badge&logo=opentelemetry&logoColor=white"/>
+  <img alt="Tauri" src="https://img.shields.io/badge/Tauri-FFC131?style=for-the-badge&logo=tauri&logoColor=black"/>
+  <img alt="Rust" src="https://img.shields.io/badge/Rust-000000?style=for-the-badge&logo=rust&logoColor=white"/>
   <img alt="Docker" src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white"/>
-  <img alt="GitHub Actions" src="https://img.shields.io/badge/GitHub%20Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white"/>
   <img alt="HuggingFace" src="https://img.shields.io/badge/🤗%20Hugging%20Face-FFD21E?style=for-the-badge&logoColor=white"/>
-  <img alt="uv" src="https://img.shields.io/badge/uv-DE5FE9?style=for-the-badge&logo=astral&logoColor=white"/>
   <img alt="Ruff" src="https://img.shields.io/badge/Ruff-D7FF64?style=for-the-badge&logo=ruff&logoColor=black"/>
-  <img alt="Pydantic" src="https://img.shields.io/badge/Pydantic-E92063?style=for-the-badge&logo=pydantic&logoColor=white"/>
-  <img alt="NumPy" src="https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white"/>
-  <img alt="MkDocs" src="https://img.shields.io/badge/MkDocs-526CFE?style=for-the-badge&logo=materialformkdocs&logoColor=white"/>
-  <img alt="Pytest" src="https://img.shields.io/badge/Pytest-0A9EDC?style=for-the-badge&logo=pytest&logoColor=white"/>
+  <img alt="uv" src="https://img.shields.io/badge/uv-DE5FE9?style=for-the-badge&logo=astral&logoColor=white"/>
 </p>
 
 ---
 
-### <a name="ml-portfolio"></a>🧪 ML Portfolio
+### Enterprise work
 
-Пять production-grade ML-проектов на общем cookiecutter-шаблоне. Полный стек: **PyTorch Lightning · Hydra · MLflow · DVC · FastAPI · Docker · GitHub Actions · MkDocs · HuggingFace Hub**.
+| Category | Role | What | Stack highlights |
+|---|---|---|---|
+| BIM / AEC | Full-stack, solo | Multi-platform AI for BIM design, 160+ engineers; Scenario Engine, MCP, OIDC | FastAPI · Tauri 2 · C#/Revit · MCP |
+| Visual RAG | Solo, 3 clients | Hybrid Visual RAG + Text2SQL for engineering docs, 4 domain profiles, air-gapped | vLLM · ChromaDB · Jina v4 · PaddleOCR |
+| Industrial B2B | Tech Lead, team 1+1 | LLM commercial-proposal automation, VLM field extraction on Qwen with xgrammar constrained decoding | Qwen 3.6 · xgrammar · networkx |
+| EdTech VR | ML advisor / mentor | VR language-learning AI; Whisper + phoneme-alignment for pronunciation, MMS-TTS fine-tune on a low-resource creole | Whisper · MMS-TTS |
 
-| Проект | Задача | Главная модель | Метрики | Статус |
+---
+
+### Presale & leadership
+
+- **10+ tenders and presale analyses over 10 months** - multilingual ticket systems, LLM infrastructure cost modelling, HR analytics, GNN for BIM, air-gapped platforms for design institutes.
+- **Tech lead** on the BIM AI system - architecture, decomposition, code review, the Scenario Engine rewrite. CQRS split, OIDC + RBAC, full audit log.
+- **Hiring & mentoring** - 10 interviews on LLM + RecSys, 2 candidates accepted by the client. ML mentoring for external teams on speech pipelines and low-resource TTS/ASR.
+
+---
+
+### <a name="ml-portfolio"></a>🧪 Open-source ML Portfolio
+
+Five production-grade ML projects on a shared cookiecutter template. Full stack: **PyTorch Lightning · Hydra · MLflow · DVC · FastAPI · Docker · GitHub Actions · MkDocs · HuggingFace Hub**.
+
+| Project | Task | Main model | Metrics | Status |
 |---|---|---|---|---|
 | [**chest-xray-classifier**](https://github.com/kiselyovd/chest-xray-classifier) [![CI](https://github.com/kiselyovd/chest-xray-classifier/actions/workflows/ci.yml/badge.svg)](https://github.com/kiselyovd/chest-xray-classifier/actions/workflows/ci.yml) [![HF](https://img.shields.io/badge/%F0%9F%A4%97-model-yellow)](https://huggingface.co/kiselyovd/chest-xray-classifier) | 3-class pneumonia classification | ConvNeXt-V2-Tiny | acc **91.3%** · F1 **90.3%** · AUROC **97.5%** | ✅ v0.1.0 |
 | [**brain-mri-segmentation**](https://github.com/kiselyovd/brain-mri-segmentation) [![CI](https://github.com/kiselyovd/brain-mri-segmentation/actions/workflows/ci.yml/badge.svg)](https://github.com/kiselyovd/brain-mri-segmentation/actions/workflows/ci.yml) [![HF](https://img.shields.io/badge/%F0%9F%A4%97-model-yellow)](https://huggingface.co/kiselyovd/brain-mri-segmentation) | Binary brain-tumor segmentation | SegFormer-B2 | Dice **65.5%** · IoU **66.2%** · Pixel acc **99.7%** | ✅ v0.1.0 |
 | [**vehicle-keypoints**](https://github.com/kiselyovd/vehicle-keypoints) [![CI](https://github.com/kiselyovd/vehicle-keypoints/actions/workflows/ci.yml/badge.svg)](https://github.com/kiselyovd/vehicle-keypoints/actions/workflows/ci.yml) [![HF](https://img.shields.io/badge/%F0%9F%A4%97-model-yellow)](https://huggingface.co/kiselyovd/vehicle-keypoints) | 14-keypoint car pose (CarFusion, n=12 761) | YOLO26-pose + ViTPose-S (baseline) | OKS-mAP **22.0%** · mAP50 **35.0%** · PCK@0.05 **49.6%** | ✅ v0.1.0 |
 | [**cardio-risk-rf**](https://github.com/kiselyovd/cardio-risk-rf) [![CI](https://github.com/kiselyovd/cardio-risk-rf/actions/workflows/test.yml/badge.svg)](https://github.com/kiselyovd/cardio-risk-rf/actions/workflows/test.yml) [![HF](https://img.shields.io/badge/%F0%9F%A4%97-model-yellow)](https://huggingface.co/kiselyovd/cardio-risk-rf) | Tabular cardiovascular-risk classification (n=70 000, test n=10 501) | LightGBM + RandomForest (baseline, ROC-AUC 79.5%) | ROC-AUC **79.8%** · PR-AUC **78.1%** · F1 **73.8%** · Brier **0.182** | ✅ v0.1.0 |
 | [**grnti-text-classifier**](https://github.com/kiselyovd/grnti-text-classifier) [![CI](https://github.com/kiselyovd/grnti-text-classifier/actions/workflows/test.yml/badge.svg)](https://github.com/kiselyovd/grnti-text-classifier/actions/workflows/test.yml) [![HF](https://img.shields.io/badge/%F0%9F%A4%97-model-yellow)](https://huggingface.co/kiselyovd/grnti-text-classifier) | Russian scientific-text classification, 28 GRNTI codes (test n=2 772) | XLM-RoBERTa-base + ruBERT-base (baseline, Top-1 72.9%) | Top-1 **72.4%** · Top-5 **96.8%** · Macro F1 **72.3%** | ✅ v0.1.0 |
-| [**ml-project-template**](https://github.com/kiselyovd/ml-project-template) [![CI](https://github.com/kiselyovd/ml-project-template/actions/workflows/ci.yml/badge.svg)](https://github.com/kiselyovd/ml-project-template/actions/workflows/ci.yml) | Cookiecutter scaffold для пяти выше | — | 12/12 meta-tests green | ✅ Stable |
+| [**ml-project-template**](https://github.com/kiselyovd/ml-project-template) [![CI](https://github.com/kiselyovd/ml-project-template/actions/workflows/ci.yml/badge.svg)](https://github.com/kiselyovd/ml-project-template/actions/workflows/ci.yml) | Cookiecutter scaffold for the five above | - | 12/12 meta-tests green | ✅ Stable |
 
-Общие фичи для всех пяти моделей: patient-/scene-level сплиты без leakage, bilingual EN+RU README, multi-stage Docker, HF Hub model cards с виджетами, DVC-трекаемые артефакты, Python 3.12+3.13 matrix CI, ruff + mypy + deptry + bandit + interrogate + pre-commit quality gates, self-hosted coverage badges.
-
----
-
-### Другие репозитории
-
-| Репозиторий | Описание |
-|-------------|----------|
-| [rag-pipeline-demo](https://github.com/kiselyovd/rag-pipeline-demo) | Модульный RAG-пайплайн — retrieval, reranking, generation |
-| [llm-finetune-template](https://github.com/kiselyovd/llm-finetune-template) | Шаблон для fine-tuning LLM с LoRA/QLoRA через Unsloth |
-| [dungeon-master-ai](https://github.com/kiselyovd/dungeon-master-ai) | D&D с AI — Clean Architecture, CQRS, FastAPI |
-| [yolo-learn](https://github.com/kiselyovd/yolo-learn) | Практический курс по YOLO — 6 модулей |
+Shared features across all five models: patient-/scene-level splits with no leakage, bilingual EN+RU README, multi-stage Docker, HF Hub model cards with widgets, DVC-tracked artefacts, Python 3.12+3.13 matrix CI, ruff + mypy + deptry + bandit + interrogate + pre-commit quality gates, self-hosted coverage badges.
 
 ---
-
-### Активность
-
-<p align="center">
-  <img src="assets/metrics.svg" alt="GitHub Metrics" width="85%" />
-</p>
-
-
----
-
-<!-- ### Контакты
-[Telegram](https://t.me/TODO) · [Email](mailto:TODO) · [hh.ru](https://hh.ru/TODO)
--->
-
-<details>
-<summary>🇬🇧 English version</summary>
-
-<br/>
-
-ML engineer focused on LLM systems, RAG, and computer vision in production.
-I build LLM-based assistants, OCR pipelines, and multimodal document models;
-deploy on-premise and in air-gapped environments for enterprise clients
-(construction, oil & gas). Former fullstack developer and team lead
-(Django/React) — I ship models as production services, not just PoCs.
-
-### Currently working on
-
-- **Text2BIM Agent** — multi-agent LLM platform for automating BIM design
-  in Autodesk Revit. Two modes: chat ("describe the edit &rarr; parametric
-  model change") and a visual DAG scenario editor (n8n-style, but with
-  LLM-aware nodes, version diff, and BIM-specific validation). Polyglot
-  monorepo (Bun + Turborepo): FastAPI backend, Tauri 2 + React 19 desktop
-  client, C# Revit plugin with multi-target build for Revit 2019/2024/2025
-  (MCP integration). Observability on OpenTelemetry +
-  Grafana/Prometheus/Jaeger, modular GitLab CI
-- **On-prem RAG** for construction documentation — Qdrant, vLLM, LangGraph,
-  air-gapped deployment
-
-<p align="center">
-  <img src="assets/text2bim-graph.svg" width="85%" alt="Text2BIM architecture" />
-</p>
-
----
-
-### 🧪 ML Portfolio
-
-Five production-grade ML projects sharing one cookiecutter template. Full stack: **PyTorch Lightning · Hydra · MLflow · DVC · FastAPI · Docker · GitHub Actions · MkDocs · HuggingFace Hub**.
-
-| Project | Task | Main model | Metrics | Status |
-|---|---|---|---|---|
-| [**chest-xray-classifier**](https://github.com/kiselyovd/chest-xray-classifier) | 3-class pneumonia classification | ConvNeXt-V2-Tiny | acc **91.3%** · F1 **90.3%** · AUROC **97.5%** | ✅ v0.1.0 |
-| [**brain-mri-segmentation**](https://github.com/kiselyovd/brain-mri-segmentation) | Binary brain-tumor segmentation | SegFormer-B2 | Dice **65.5%** · IoU **66.2%** · Pixel acc **99.7%** | ✅ v0.1.0 |
-| [**vehicle-keypoints**](https://github.com/kiselyovd/vehicle-keypoints) [![CI](https://github.com/kiselyovd/vehicle-keypoints/actions/workflows/ci.yml/badge.svg)](https://github.com/kiselyovd/vehicle-keypoints/actions/workflows/ci.yml) [![HF](https://img.shields.io/badge/%F0%9F%A4%97-model-yellow)](https://huggingface.co/kiselyovd/vehicle-keypoints) | 14-keypoint car pose (CarFusion, n=12 761) | YOLO26-pose + ViTPose-S (baseline) | OKS-mAP **22.0%** · mAP50 **35.0%** · PCK@0.05 **49.6%** | ✅ v0.1.0 |
-| [**cardio-risk-rf**](https://github.com/kiselyovd/cardio-risk-rf) [![CI](https://github.com/kiselyovd/cardio-risk-rf/actions/workflows/test.yml/badge.svg)](https://github.com/kiselyovd/cardio-risk-rf/actions/workflows/test.yml) [![HF](https://img.shields.io/badge/%F0%9F%A4%97-model-yellow)](https://huggingface.co/kiselyovd/cardio-risk-rf) | Tabular cardiovascular-risk classification (n=70 000, test n=10 501) | LightGBM + RandomForest (baseline, ROC-AUC 79.5%) | ROC-AUC **79.8%** · PR-AUC **78.1%** · F1 **73.8%** · Brier **0.182** | ✅ v0.1.0 |
-| [**grnti-text-classifier**](https://github.com/kiselyovd/grnti-text-classifier) [![CI](https://github.com/kiselyovd/grnti-text-classifier/actions/workflows/test.yml/badge.svg)](https://github.com/kiselyovd/grnti-text-classifier/actions/workflows/test.yml) [![HF](https://img.shields.io/badge/%F0%9F%A4%97-model-yellow)](https://huggingface.co/kiselyovd/grnti-text-classifier) | Russian scientific-text classification, 28 GRNTI codes (test n=2 772) | XLM-RoBERTa-base + ruBERT-base (baseline, Top-1 72.9%) | Top-1 **72.4%** · Top-5 **96.8%** · Macro F1 **72.3%** | ✅ v0.1.0 |
-| [**ml-project-template**](https://github.com/kiselyovd/ml-project-template) [![CI](https://github.com/kiselyovd/ml-project-template/actions/workflows/ci.yml/badge.svg)](https://github.com/kiselyovd/ml-project-template/actions/workflows/ci.yml) | Cookiecutter scaffold | — | 12/12 meta-tests | ✅ Stable |
-
-Every repo ships: patient-/scene-level splits with no leakage, bilingual EN+RU README, multi-stage Docker, HF Hub model card with widgets, DVC-tracked artefacts, Python 3.12+3.13 matrix CI, full quality gates (ruff + mypy + deptry + bandit + interrogate + pre-commit), self-hosted coverage badges.
-
----
-
-<p align="center">
-  <img alt="Python" src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white"/>
-  <img alt="PyTorch" src="https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white"/>
-  <img alt="Lightning" src="https://img.shields.io/badge/Lightning-792EE5?style=for-the-badge&logo=lightning&logoColor=white"/>
-  <img alt="Hydra" src="https://img.shields.io/badge/Hydra-89B8CD?style=for-the-badge&logo=meta&logoColor=white"/>
-  <img alt="MLflow" src="https://img.shields.io/badge/MLflow-0194E2?style=for-the-badge&logo=mlflow&logoColor=white"/>
-  <img alt="DVC" src="https://img.shields.io/badge/DVC-13ADC7?style=for-the-badge&logo=dvc&logoColor=white"/>
-  <img alt="FastAPI" src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white"/>
-  <img alt="Docker" src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white"/>
-  <img alt="GitHub Actions" src="https://img.shields.io/badge/GitHub%20Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white"/>
-  <img alt="HuggingFace" src="https://img.shields.io/badge/🤗%20Hugging%20Face-FFD21E?style=for-the-badge&logoColor=white"/>
-  <img alt="uv" src="https://img.shields.io/badge/uv-DE5FE9?style=for-the-badge&logo=astral&logoColor=white"/>
-  <img alt="Ruff" src="https://img.shields.io/badge/Ruff-D7FF64?style=for-the-badge&logo=ruff&logoColor=black"/>
-  <img alt="Pydantic" src="https://img.shields.io/badge/Pydantic-E92063?style=for-the-badge&logo=pydantic&logoColor=white"/>
-  <img alt="NumPy" src="https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white"/>
-  <img alt="MkDocs" src="https://img.shields.io/badge/MkDocs-526CFE?style=for-the-badge&logo=materialformkdocs&logoColor=white"/>
-  <img alt="Pytest" src="https://img.shields.io/badge/Pytest-0A9EDC?style=for-the-badge&logo=pytest&logoColor=white"/>
-</p>
 
 ### Activity
 
@@ -164,9 +79,39 @@ Every repo ships: patient-/scene-level splits with no leakage, bilingual EN+RU R
   <img src="assets/metrics.svg" alt="GitHub Metrics" width="85%" />
 </p>
 
+---
 
-<!-- ### Contact
-[Telegram](https://t.me/TODO) · [Email](mailto:TODO) · [hh.ru](https://hh.ru/TODO)
--->
+<details>
+<summary>🇷🇺 Русская версия</summary>
+
+<br/>
+
+Lead ML Engineer. Строю LLM-системы, RAG и мультимодальные пайплайны для корпоративных заказчиков в on-premise и air-gapped контурах. 5.5 лет в ML и разработке; последние три года - LLM, OCR/VLM и RAG-платформы в проде от архитектуры до поддержки.
+
+Fullstack и тимлид-бэкграунд (Django/React) помогает доводить модели до полноценных сервисов, а не PoC.
+
+### Сейчас
+
+- **Мультиплатформенная AI-система для BIM-проектирования** - продакшен, 160+ инженеров крупного девелопера. Scenario Engine (визуальный DAG с LLM-нодами, версионированием, rollback) вместо прежней мультиагентной архитектуры. Polyglot-монорепо: FastAPI-бэкенд, Tauri 2 + React 19 desktop, C# плагин для Revit с собственным MCP-протоколом. MLOps-контур: OpenTelemetry + Langfuse + Prometheus + Grafana + Jaeger.
+- **Visual RAG-платформа** для инженерной документации - гибридный ретривал (Visual RAG по PDF/DWG на Jina v4 + Text2SQL через Qwen на vLLM), 4 domain-профиля, air-gapped развёртывания. Три корпоративных заказчика закрыто.
+
+### Enterprise-проекты
+
+| Категория | Роль | Что | Стек |
+|---|---|---|---|
+| BIM / AEC | Full-stack, соло | Мультиплатформенная AI-система, 160+ инженеров; Scenario Engine, MCP, OIDC | FastAPI · Tauri 2 · C#/Revit · MCP |
+| Visual RAG | Соло, 3 заказчика | Гибрид Visual RAG + Text2SQL для инженерной документации, 4 domain-профиля, air-gapped | vLLM · ChromaDB · Jina v4 · PaddleOCR |
+| Промышленный B2B | Tech Lead, команда 1+1 | LLM-автоматизация КП, VLM-экстракция на Qwen через xgrammar | Qwen 3.6 · xgrammar · networkx |
+| EdTech / VR | ML-ментор | VR-платформа для изучения языков; Whisper + phoneme-alignment, MMS-TTS под низкоресурсный креольский | Whisper · MMS-TTS |
+
+### Пресейл и лидерство
+
+- **10+ тендеров и пресейл-аналитики за 10 месяцев** - мультиязычные тикет-системы, cost-модели LLM-инфраструктуры, HR-аналитика, GNN-планировщик для BIM, air-gapped платформы для проектных институтов.
+- **Техлид** на BIM AI-системе - архитектура, декомпозиция, код-ревью, rewrite на Scenario Engine. CQRS, OIDC + RBAC, полный audit-log.
+- **Найм и менторинг** - 10 интервью LLM + RecSys, 2 кандидата приняты заказчиком. ML-менторинг внешних команд по речевым пайплайнам и low-resource TTS/ASR.
+
+### 🧪 Open-source ML-портфолио
+
+Пять production-grade ML-проектов на общем cookiecutter-шаблоне. Тот же набор моделей и метрик, что в английской версии таблицы выше - карточки на GitHub и HuggingFace доступны по тем же ссылкам.
 
 </details>
