@@ -64,12 +64,23 @@ Five production-grade ML projects on a shared cookiecutter template. Full stack:
 |---|---|---|---|---|
 | [**chest-xray-classifier**](https://github.com/kiselyovd/chest-xray-classifier) [![CI](https://github.com/kiselyovd/chest-xray-classifier/actions/workflows/ci.yml/badge.svg)](https://github.com/kiselyovd/chest-xray-classifier/actions/workflows/ci.yml) [![HF](https://img.shields.io/badge/%F0%9F%A4%97-model-yellow)](https://huggingface.co/kiselyovd/chest-xray-classifier) | 3-class pneumonia classification | ConvNeXt-V2-Tiny | acc **91.3%** · F1 **90.3%** · AUROC **97.5%** | ✅ v0.1.0 |
 | [**brain-mri-segmentation**](https://github.com/kiselyovd/brain-mri-segmentation) [![CI](https://github.com/kiselyovd/brain-mri-segmentation/actions/workflows/ci.yml/badge.svg)](https://github.com/kiselyovd/brain-mri-segmentation/actions/workflows/ci.yml) [![HF](https://img.shields.io/badge/%F0%9F%A4%97-model-yellow)](https://huggingface.co/kiselyovd/brain-mri-segmentation) | Binary brain-tumor segmentation | SegFormer-B2 | Dice **65.5%** · IoU **66.2%** · Pixel acc **99.7%** | ✅ v0.1.0 |
-| [**vehicle-keypoints**](https://github.com/kiselyovd/vehicle-keypoints) [![CI](https://github.com/kiselyovd/vehicle-keypoints/actions/workflows/ci.yml/badge.svg)](https://github.com/kiselyovd/vehicle-keypoints/actions/workflows/ci.yml) [![HF](https://img.shields.io/badge/%F0%9F%A4%97-model-yellow)](https://huggingface.co/kiselyovd/vehicle-keypoints) | 14-keypoint car pose (CarFusion, n=12 761) | YOLO26-pose + ViTPose-S (baseline) | OKS-mAP **22.0%** · mAP50 **35.0%** · PCK@0.05 **49.6%** | ✅ v0.1.0 |
+| [**vehicle-keypoints**](https://github.com/kiselyovd/vehicle-keypoints) [![CI](https://github.com/kiselyovd/vehicle-keypoints/actions/workflows/ci.yml/badge.svg)](https://github.com/kiselyovd/vehicle-keypoints/actions/workflows/ci.yml) [![HF](https://img.shields.io/badge/%F0%9F%A4%97-model-yellow)](https://huggingface.co/kiselyovd/vehicle-keypoints) [![HF downloads](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fhuggingface.co%2Fapi%2Fmodels%2Fkiselyovd%2Fvehicle-keypoints&query=%24.downloads&label=%F0%9F%A4%97%20downloads%2Fmo&color=ffd21e&cacheSeconds=86400)](https://huggingface.co/kiselyovd/vehicle-keypoints) | 14-keypoint car pose (CarFusion, n=12 761) | YOLO26-pose + ViTPose-S (baseline) | OKS-mAP **22.0%** · mAP50 **35.0%** · PCK@0.05 **49.6%** | ✅ v0.1.0 |
 | [**cardio-risk-rf**](https://github.com/kiselyovd/cardio-risk-rf) [![CI](https://github.com/kiselyovd/cardio-risk-rf/actions/workflows/test.yml/badge.svg)](https://github.com/kiselyovd/cardio-risk-rf/actions/workflows/test.yml) [![HF](https://img.shields.io/badge/%F0%9F%A4%97-model-yellow)](https://huggingface.co/kiselyovd/cardio-risk-rf) | Tabular cardiovascular-risk classification (n=70 000, test n=10 501) | LightGBM + RandomForest (baseline, ROC-AUC 79.5%) | ROC-AUC **79.8%** · PR-AUC **78.1%** · F1 **73.8%** · Brier **0.182** | ✅ v0.1.0 |
 | [**grnti-text-classifier**](https://github.com/kiselyovd/grnti-text-classifier) [![CI](https://github.com/kiselyovd/grnti-text-classifier/actions/workflows/test.yml/badge.svg)](https://github.com/kiselyovd/grnti-text-classifier/actions/workflows/test.yml) [![HF](https://img.shields.io/badge/%F0%9F%A4%97-model-yellow)](https://huggingface.co/kiselyovd/grnti-text-classifier) | Russian scientific-text classification, 28 GRNTI codes (test n=2 772) | XLM-RoBERTa-base + ruBERT-base (baseline, Top-1 72.9%) | Top-1 **72.4%** · Top-5 **96.8%** · Macro F1 **72.3%** | ✅ v0.1.0 |
 | [**ml-project-template**](https://github.com/kiselyovd/ml-project-template) [![CI](https://github.com/kiselyovd/ml-project-template/actions/workflows/ci.yml/badge.svg)](https://github.com/kiselyovd/ml-project-template/actions/workflows/ci.yml) | Cookiecutter scaffold for the five above | - | 12/12 meta-tests green | ✅ Stable |
 
 Shared features across all five models: patient-/scene-level splits with no leakage, bilingual EN+RU README, multi-stage Docker, HF Hub model cards with widgets, DVC-tracked artefacts, Python 3.12+3.13 matrix CI, ruff + mypy + deptry + bandit + interrogate + pre-commit quality gates, self-hosted coverage badges.
+
+> **vehicle-keypoints** is the most-pulled model of the set - **1k+ downloads/month** on the Hub.
+
+---
+
+### 🎬 Synthetic data & monocular 3D pose (research track)
+
+A sister line of work around **vehicle-keypoints**, exploring sim-to-real training and lifting 2D keypoints to 3D pose:
+
+- [**ue5-vehicle-synth**](https://github.com/kiselyovd/ue5-vehicle-synth) - an Unreal Engine 5 C++ plugin that captures keypoint-annotated vehicle datasets from Epic's **City Sample**, on a 24-point schema (CarFusion-14 compatible), with a cinematic generation demo and a published [🤗 dataset](https://huggingface.co/datasets/kiselyovd/citysample-vehicle-keypoints-24pt).
+- **Monocular 3D pose baseline** inside vehicle-keypoints: detector -> PnP (`solvePnPRansac`) against a canonical rigid car wireframe -> 6DoF pose, evaluated on the ApolloCar3D benchmark (median rotation error **13.6 deg**, 37.8% of cars within 10 deg).
 
 ---
 
@@ -112,6 +123,13 @@ Fullstack и тимлид-бэкграунд (Django/React) помогает д�
 
 ### 🧪 Open-source ML-портфолио
 
-Пять production-grade ML-проектов на общем cookiecutter-шаблоне. Тот же набор моделей и метрик, что в английской версии таблицы выше - карточки на GitHub и HuggingFace доступны по тем же ссылкам.
+Пять production-grade ML-проектов на общем cookiecutter-шаблоне. Тот же набор моделей и метрик, что в английской версии таблицы выше - карточки на GitHub и HuggingFace доступны по тем же ссылкам. Самая скачиваемая модель набора - **vehicle-keypoints** (1000+ загрузок в месяц на Hub).
+
+### 🎬 Синтетические данные и монокулярная 3D-поза (research)
+
+Смежная линия работ вокруг **vehicle-keypoints** - sim-to-real обучение и переход от 2D-ключевых точек к 3D-позе:
+
+- [**ue5-vehicle-synth**](https://github.com/kiselyovd/ue5-vehicle-synth) - плагин на C++ для Unreal Engine 5, который снимает размеченные датасеты ключевых точек авто из **City Sample** Epic по 24-точечной схеме (совместимой с CarFusion-14), с кинематографичным demo-роликом генерации и опубликованным [🤗 датасетом](https://huggingface.co/datasets/kiselyovd/citysample-vehicle-keypoints-24pt).
+- **Монокулярный 3D-baseline** внутри vehicle-keypoints: детектор -> PnP (`solvePnPRansac`) по каноничному жёсткому каркасу авто -> 6DoF поза, оценка на бенчмарке ApolloCar3D (медианная ошибка поворота **13.6 deg**, 37.8% машин в пределах 10 deg).
 
 </details>
