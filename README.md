@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/portfolio_banner.svg" width="100%" alt="Daniil Kiselyov · Lead ML Engineer" />
+  <img src="assets/banner.jpg" width="100%" alt="Daniil Kiselyov · Lead ML Engineer · LLM systems that ship to production" />
 </p>
 
 Lead ML Engineer. I build LLM systems, RAG, and multimodal pipelines for enterprise clients in on-premise and air-gapped environments. 5.5 years in ML and engineering; the last three years end-to-end LLM, OCR/VLM, and RAG platforms in production.
